@@ -20,6 +20,10 @@ export const Form3 = () => {
 
   const handleBackClick = () => {
     navigate(`/form2`);
+    const userInfoForm3 = {
+      selectedView,
+    };
+    localStorage.setItem("userDataForm3", JSON.stringify(userInfoForm3));
   };
 
   return (
@@ -33,7 +37,10 @@ export const Form3 = () => {
           You can also customize this views in settings
         </p>
         <div className="flex flex-row items-center justify-center pb-48 pt-8">
-          <div className="mr-10" onClick={() => setSelectedView("List")}>
+          <div
+            className="mr-4 lg:mr-10"
+            onClick={() => setSelectedView("List")}
+          >
             <div
               className={`border-2 rounded-md pt-6 pb-6 pl-12 pr-12 ${
                 selectedView === "List" && "border-2 border-blue-500"

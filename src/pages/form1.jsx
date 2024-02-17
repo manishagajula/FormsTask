@@ -28,8 +28,8 @@ export const Form1 = () => {
   };
 
   return (
-    <div className="mt-12 flex flex-col items-center justify-center">
-      <div className="relative border rounded-xl p-10 shadow-lg">
+    <div className="mt-12 flex flex-col lg:items-center lg:justify-center">
+      <div className="relative border rounded-xl p-4 lg:p-10 shadow-lg">
         <div className="absolute top-5 right-5 text-gray-400 text-xl">
           <RxCross2 />
         </div>
@@ -37,7 +37,7 @@ export const Form1 = () => {
         <h1 className="text-2xl font-semibold pb-6">Create a project</h1>
 
         <form action="">
-          <div className=" flex flex-col justify-start items-start">
+          <div className=" flex flex-col lg:justify-start lg:items-start">
             <div className=" flex flex-col justify-start items-start pb-4">
               <label htmlFor="projectName" className="pb-2 font-medium">
                 Project Name
@@ -48,16 +48,15 @@ export const Form1 = () => {
                 id="projectName"
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
-                className="border p-2 rounded-md"
+                className="border p-2 rounded-md lg:w-[400px]"
                 placeholder="Enter project name here"
-                style={{ width: "460px" }}
               />
             </div>
             <div className=" flex flex-col justify-start items-start pb-4">
               <label htmlFor="Client" className="pb-2 font-medium">
                 Client
               </label>
-              <div className=" flex flex-row">
+              <div className="flex flex-col lg:flex-row">
                 {/* <input
                 type="text"
                 name="email"
@@ -111,7 +110,7 @@ export const Form1 = () => {
               <label htmlFor="dates" className="pb-2 font-medium ">
                 Dates
               </label>
-              <div>
+              <div className="flex flex-col lg:flex-row">
                 <input
                   type="date"
                   name="dates"
@@ -147,7 +146,7 @@ export const Form1 = () => {
                   id="notes"
                   value={selectedNotes}
                   onChange={(e) => setSelectedNotes(e.target.value)}
-                  className="border p-2 rounded-md"
+                  className="border p-2 rounded-md w-full"
                   placeholder="Optional"
                   rows={4}
                   cols={50}

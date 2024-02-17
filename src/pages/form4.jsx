@@ -13,6 +13,10 @@ export const Form4 = () => {
 
   const handleBackClick = () => {
     navigate(`/form3`);
+    const userInfoForm4 = {
+      selectedProject,
+    };
+    localStorage.setItem("userDataForm4", JSON.stringify(userInfoForm4));
   };
 
   return (
